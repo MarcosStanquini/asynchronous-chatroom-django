@@ -121,6 +121,13 @@ USE_TZ = True
 STATIC_URL = 'static/'
 ASGI_APLLICATION = "core.routing.application"
 
+CHANNEL_LAYERS = {
+    "default": {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+        
+    }
+}
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
